@@ -208,9 +208,11 @@ python -m training \
 
 If you find our project helpful, please star our repo and cite our work. Thanks!
 
-```@Misc{bioGPT,
-      title={viBioGPT: A Vietnamese Large Language Model for Biomedical Question Answering},
+```bibtex
+@misc{viBioGPT,
+      title={Vietnamese Medical QA: Question Answering dataset for medical in Vietnamese},
       author={Hung Nguyen},
       howpublished={\url{https://github.com/hungnm-ai/viBioGPT}},
       year={2024},
 }
+```
