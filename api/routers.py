@@ -43,14 +43,15 @@ def ping():
 
 
 @app.post("/qa")
-def qa(question: str, messages: HistoryChat):
+def qa(question: str, messages: HistoryChat = None):
     conversation = [
         {
             "role": "system",
             "content": system_prompt}
     ]
-    history = [message.dict() for message in messages.messages]
-    conversation.extend(history)
+    if messages is not None:
+        history = [message.dict() for message in messages.messages]
+        conversation.extend(history)
     conversation.append({
         "role": "user",
         "content": question
@@ -74,4 +75,4 @@ def qa(question: str, messages: HistoryChat):
         "role": "assistant",
         "content": output
     })
-    return JSONResponse(content={"status": True, "conversation": conversation}, status_code=200)
+    return JSONResponse(content={"status": True, "messages": messages, "answer": output}, status_code=200)
