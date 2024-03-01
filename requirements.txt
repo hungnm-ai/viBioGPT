@@ -21,3 +21,4 @@ selenium==4.17.2
 scrapy==2.11.1
 html2text==2020.1.16
 tqdm==4.66.1
+fastapi==0.108.0
