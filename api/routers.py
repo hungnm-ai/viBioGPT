@@ -70,6 +70,8 @@ def qa(question: str, messages: HistoryChat):
     output_token_ids = all_token_ids[token_ids.shape[-1]:]
     output = tokenizer.decode(output_token_ids)
 
-    print(output)
-
-    return JSONResponse(content={"status": True, "data": conversation})
+    conversation.append({
+        "role": "assistant",
+        "content": output
+    })
+    return JSONResponse(content={"status": True, "conversation": conversation}, status_code=200)

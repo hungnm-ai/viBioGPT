@@ -3,7 +3,6 @@ typer==0.9.0
 sentence_transformers==2.2.2
 accelerate==0.21.0
 sentencepiece==0.1.99
-pydantic==1.10.13
 transformers==4.36.2
 chromadb==0.3.23
 colorama==0.4.6
@@ -21,4 +20,6 @@ selenium==4.17.2
 scrapy==2.11.1
 html2text==2020.1.16
 tqdm==4.66.1
-fastapi==0.108.0
+ffastapi==0.110.0
+gunicorn==21.2.0
+pydantic==2.6.3
